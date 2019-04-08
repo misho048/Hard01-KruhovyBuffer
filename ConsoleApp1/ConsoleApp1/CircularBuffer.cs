@@ -22,6 +22,7 @@ namespace ConsoleApp1
             {
                 _buffer[variable] = input;
                 variable++;
+                
                 return true;
             }
 
@@ -47,6 +48,7 @@ namespace ConsoleApp1
             if (variable != 0)
             {
                 variable--;
+                variable = variable % bufferSize;
             }
             char result = _buffer[variable % bufferSize];
             _buffer[variable % bufferSize] =' ';
